@@ -8,8 +8,9 @@ def Homepage(request):
 
 
 def Pranjul(request):
-
-    return render(request, 'pranjul.html')
+    dress = Dress.objects.all()
+    context = { 'dress':dress }
+    return render(request, 'pranjul.html',context)
 
 
 def Ganesha(request):
